@@ -1,5 +1,5 @@
-# 忽略原始输入文件（二进制，不适合版本控制）
-Commodity_MID_20*.xlsx
+# 忽略所有 xlsx 文件（原始输入 + 合并结果）
+*.xlsx
 
 # Python
 __pycache__/
