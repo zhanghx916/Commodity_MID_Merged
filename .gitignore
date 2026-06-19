@@ -1,0 +1,15 @@
+# 忽略原始输入文件（二进制，不适合版本控制）
+Commodity_MID_20*.xlsx
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# 工作环境
+.workbuddy/
+
+# 临时文件
+*.tmp
+*.log
+test_*.xlsx
