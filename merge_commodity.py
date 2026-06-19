@@ -14,6 +14,7 @@ import sys
 import glob
 import copy
 import os
+import argparse
 
 # 修复 Windows 控制台中文编码问题
 sys.stdout.reconfigure(encoding='utf-8', errors='replace')
@@ -93,7 +94,12 @@ def copy_sheet_full(src_ws, dst_ws):
 # ──────────────────────────────────────────────
 
 def main():
-    work_dir = r"C:\Commodity_MID_"
+    parser = argparse.ArgumentParser(description="合并 Commodity_MID_*.xlsx 文件")
+    parser.add_argument("--dir", default=os.path.dirname(os.path.abspath(__file__)),
+                        help="目标文件夹路径（默认：脚本所在目录）")
+    args = parser.parse_args()
+
+    work_dir = args.dir
     pattern = os.path.join(work_dir, "Commodity_MID_*.xlsx")
     output_path = os.path.join(work_dir, "Commodity_MID_merged.xlsx")
 

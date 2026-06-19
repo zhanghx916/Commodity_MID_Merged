@@ -1,15 +1,9 @@
-# 忽略所有 xlsx 文件（原始输入 + 合并结果）
-*.xlsx
+# 输入文件（带时间戳的原始数据）
+Commodity_MID_202*.xlsx
 
-# Python
-__pycache__/
-*.pyc
-*.pyo
+# 合并输出文件
+Commodity_MID_merged.xlsx
 
-# 工作环境
-.workbuddy/
-
-# 临时文件
-*.tmp
-*.log
-test_*.xlsx
+# 测试文件
+*test*
+*Test*
